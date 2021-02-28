@@ -1,16 +1,13 @@
+const argv = require('yargs/yargs')(process.argv.slice(2)).argv;
 
-console.log('Prueba');
+const {multiplicar} = require("./multiplicador");
 
-const base = 4;
+console.log(argv);
 
-console.log(`=====================
-    tabla base ${base}
-=====================`)
-let resultado;
-for (let i= 0; i <= 10; i++) {
-    
-    resultado=`${base} * ${i} = ${base*i}`
-    console.log(resultado);
-    
-}
 
+
+const base = 6;
+
+multiplicar(argv.base); 
+
+//multiplicar(base);
